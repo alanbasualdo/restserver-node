@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const { dbConnection } = require('../database/config')
+require('colors')
 
 class Server {
     constructor() {
@@ -39,7 +40,7 @@ class Server {
 
     listen() {
         this.app.listen(this.port, () => {
-            console.log('Server is running at port', this.port)
+            console.log(`Server is running at port ${this.port}`.yellow)
         })
     }
 }
