@@ -50,6 +50,7 @@
                 console.log(resp)
                 localStorage.setItem('email', resp.usuario.correo)
             })
+            .then(location.reload())
             .catch(console.warn)
     }
 
